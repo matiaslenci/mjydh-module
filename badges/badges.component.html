@@ -1,0 +1,14 @@
+<span *ngIf="value"  class="top-0 start-100 translate-middle badge rounded-pill bg-success">
+    
+    <div *ngIf="isNumber() ; else elseBlock">
+        {{isNumber()}}
+    </div>
+    <ng-template #elseBlock style="font-size: 12px;" >
+        <span class="material-icons text-small" style="font-size: 12px;">check</span>
+    </ng-template>
+</span>
+<span
+    *ngIf="!value"
+    class="top-0 start-100 translate-middle badge rounded-pill bg-danger text-small">
+    <span class="material-icons text-small" style="font-size: 12px;">close</span>
+</span>

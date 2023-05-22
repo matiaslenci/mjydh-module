@@ -1,0 +1,19 @@
+<!-- Utilizamos una etiqueta ng-container para agrupar los elementos que vamos a mostrar u ocultar según la lógica de validación. -->
+<!-- El componente espera 3 inputs nombre del formGroup, tipo de error(ej: required) y el nombre del campo -->
+<!-- <app-validator-errors [control]="formCronologico" getCampo="folio" ></app-validator-errors> -->
+<!-- 
+Para dar los estilos a los form  usamos el Servicio de MJYDH 
+
+Para el label Infica si es Oblogatorio
+  <i [innerHtml]="MjydhServide.markRequerid()" ></i> 
+Calse para el Input - 
+ [ngClass]="MjydhServide.validNgclass(formulario.get('campo'))"
+
+-->
+<ng-container 
+  *ngIf="getCampoControl(getCampo).errors && getCampoControl(getCampo).touched"
+>
+  <div class="alert alert-danger gy-5">
+    * {{mensaje}}
+  </div>
+</ng-container>
