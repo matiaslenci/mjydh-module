@@ -1,0 +1,8 @@
+{
+  "name": "mjydh-module",
+  "version": "1.0.0",
+  "description": "Modulo de paquetes de componentes para formularios de angular v15",
+  "main": "index.js",
+  "repository": "https://github.com/matiaslenci/mjydh-module.git",
+  "license": "MIT"
+}
